@@ -1,6 +1,7 @@
 :root {
   --title-color: #34675C;
   --text-color: #67757E;
+  --projects-fixed-height: 400px;
 }
 
 * {
@@ -30,7 +31,7 @@ a {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 60px;
+  height: 50px;
   padding: 0 37px;
   padding-right: 27px;
   color: white;
@@ -41,13 +42,13 @@ a {
 
 .header h1 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .header i {
   display: inline-block;
   font-size: 24px;
-  padding: 10px;
+  padding: 8px;
   margin: auto 0;
 }
 
@@ -69,6 +70,10 @@ a {
 .projects {
   background: linear-gradient(#FFFFFF, #EFF2F5);
   padding-bottom: 5px;
+}
+
+.projects__fixed__height {
+  height: var(--projects-fixed-height);
 }
 
 .contact {
@@ -154,17 +159,22 @@ a {
 }
 
 .project {
+  position: relative;
+  align-self: flex-start;
   width: 100%;
   margin: 40px 0;
   border: 1px solid #BFBFBF;
   border-radius: 6px;
   background-color: white;
+  overflow: hidden;
 }
 
 .project img {
   width: 100%;
   margin: 0;
   border-bottom: 1px solid #BFBFBF;
+  position: relative;
+  z-index: 10;
 }
 
 .project h2 {
@@ -172,15 +182,38 @@ a {
   font-family: 'Lato', sans-serif;
   font-size: 23px;
   text-align: center;
+  margin-top: 7px;
 }
 
 .project__description {
-  display: none;
-  padding: 17px;
-  padding-bottom: 1px;
+  position: relative;
+  padding-left: 17px;
   color: var(--text-color);
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.project__description__show {
+  max-height: 250px;
+}
+
+.project__more,
+.project__less {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  font-family: 'Open-sans', sans-serif;
+  font-size: 14px;
+  padding: 12px;
+  color: #FF752D;
+  cursor: pointer;
+}
+
+.project__less {
+  display: none;
 }
 
 .contact .contact__email,
@@ -286,6 +319,13 @@ a {
     width: 47%;
     margin-bottom: 0;
   }
+  .project h2 {
+    font-size: 19px;
+  }
+  .project__more,
+  .project__less {
+    bottom: 5px;
+  }
   .contact {
     background: url("images/Contact_BG_Mobile_Landscape.svg") bottom/100% no-repeat;
   }
@@ -298,8 +338,9 @@ a {
     margin: auto;
     box-shadow: 0 0 8px #ABABAB;
   }
-  .project h2 {
-    font-size: 19px;
+  .project__more,
+  .project__less {
+    bottom: 5px;
   }
   .contact-info {
     padding: 0 50px;
@@ -316,6 +357,15 @@ a {
   }
   .contact {
     background: url("images/Contact_BG_Desktop.svg") bottom/100% no-repeat;
+  }
+  .project:hover .project__description {
+    /* This max-height must be greater than the 'project__description' will ever be */
+    max-height: 250px;
+    transition: max-height 0.5s ease-out;
+  }
+  .project__more,
+  .project__less {
+    display: none;
   }
 }
 
