@@ -1,7 +1,7 @@
 :root {
   --title-color: #34675C;
   --text-color: #67757E;
-  --projects-fixed-height: 400px;
+  --projects-fixed-height: auto;
 }
 
 * {
@@ -64,7 +64,7 @@ a {
   background: url("images/About_BG.svg") bottom/100% no-repeat;
   background-size: cover;
   padding: 40px 37px 10px 37px;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .projects {
@@ -72,8 +72,12 @@ a {
   padding-bottom: 5px;
 }
 
+.projects-group {
+  position: relative;
+}
+
 .projects__fixed__height {
-  height: var(--projects-fixed-height);
+  min-height: var(--projects-fixed-height);
 }
 
 .contact {
@@ -167,14 +171,21 @@ a {
   border-radius: 6px;
   background-color: white;
   overflow: hidden;
+  box-shadow: 0px 3px 5px #cbcaca;
+}
+
+.project:nth-child(1) {
+  z-index: 100;
+}
+
+.project:nth-child(2) {
+  z-index: 10;
 }
 
 .project img {
   width: 100%;
   margin: 0;
   border-bottom: 1px solid #BFBFBF;
-  position: relative;
-  z-index: 10;
 }
 
 .project h2 {
@@ -194,6 +205,7 @@ a {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
+  z-index: 100;
 }
 
 .project__description__show {
