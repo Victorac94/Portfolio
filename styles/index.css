@@ -362,13 +362,16 @@ a {
 @media only screen and (min-width: 1000px) {
   .container,
   .header {
-    width: 70%;
+    width: 900px;
   }
   .about {
     background: url("images/About_BG_Desktop.svg") bottom/100% no-repeat;
   }
   .contact {
     background: url("images/Contact_BG_Desktop.svg") bottom/100% no-repeat;
+  }
+  .project {
+    width: 31%;
   }
   .project:hover .project__description {
     /* This max-height must be greater than the 'project__description' will ever be */
@@ -387,11 +390,5 @@ a {
   }
   .menu-desktop p:last-child {
     padding-right: 10px;
-  }
-  .project {
-    width: 31%;
-  }
-  .contact-info {
-    padding: 0 100px;
   }
 }
