@@ -359,7 +359,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1025px) {
   .container,
   .header {
     width: 900px;
