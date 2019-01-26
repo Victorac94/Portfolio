@@ -15,6 +15,11 @@ body {
   margin: 0;
 }
 
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #abd7ff, #e7f6ff) no-repeat;
+}
+
 a {
   text-decoration: none;
   color: var(--text-color);
@@ -61,14 +66,14 @@ a {
 
 .about {
   position: relative;
-  background: url("images/About_BG.svg") bottom/100% no-repeat;
+  background: #ffffff url("images/About_BG.svg") bottom/100% no-repeat;
   background-size: cover;
   padding: 40px 37px 10px 37px;
   margin-top: 50px;
 }
 
 .projects {
-  background: linear-gradient(#FFFFFF, #EFF2F5);
+  background: linear-gradient(#f4f9ff, #f5f8fa);
   padding-bottom: 5px;
 }
 
@@ -271,10 +276,10 @@ a {
 
 @media only screen and (max-width: 640px) and (orientation: landscape) {
   .about {
-    background: url("images/About_BG_Mobile_Landscape.svg") bottom/100% no-repeat;
+    background: #fff url("images/About_BG_Mobile_Landscape.svg") bottom/100% no-repeat;
   }
   .contact {
-    background: url("images/Contact_BG_Mobile_Landscape.svg") bottom/100% no-repeat;
+    background: #fff url("images/Contact_BG_Mobile_Landscape.svg") bottom/100% no-repeat;
   }
 }
 
@@ -309,7 +314,7 @@ a {
     user-select: none;
   }
   .about {
-    background: url("images/About_BG_Mobile_Landscape.svg") bottom/100% no-repeat;
+    background: #fff url("images/About_BG_Mobile_Landscape.svg") bottom/100% no-repeat;
   }
   .about-info,
   .contact-info {
@@ -339,7 +344,7 @@ a {
     bottom: 5px;
   }
   .contact {
-    background: url("images/Contact_BG_Mobile_Landscape.svg") bottom/100% no-repeat;
+    background: #fff url("images/Contact_BG_Mobile_Landscape.svg") bottom/100% no-repeat;
   }
 }
 
@@ -365,10 +370,10 @@ a {
     width: 900px;
   }
   .about {
-    background: url("images/About_BG_Desktop.svg") bottom/100% no-repeat;
+    background: #fff url("images/About_BG_Desktop.svg") bottom/100% no-repeat;
   }
   .contact {
-    background: url("images/Contact_BG_Desktop.svg") bottom/100% no-repeat;
+    background: #fff url("images/Contact_BG_Desktop.svg") bottom/100% no-repeat;
   }
   .project {
     width: 31%;
@@ -390,5 +395,59 @@ a {
   }
   .menu-desktop p:last-child {
     padding-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    width: 1400px;
+  }
+  .header {
+    width: 1400px;
+    height: 80px;
+  }
+  .header h1 {
+    font-size: 28px;
+  }
+  .menu-desktop p {
+    font-size: 23px;
+  }
+  .about h1 {
+    margin-top: 30px;
+  }
+  .about h1,
+  .projects h1,
+  .contact h1 {
+    font-size: 29px;
+  }
+  .about-info img {
+    width: 250px;
+    margin-left: 30px;
+    margin-bottom: 60px;
+  }
+  .about-info p {
+    font-size: 24px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .project h2 {
+    font-size: 27px;
+  }
+  .project__description p {
+    font-size: 24px;
+  }
+  .contact .contact__email {
+    height: auto;
+    font-size: 31px;
+  }
+  .fa-envelope {
+    position: relative;
+    bottom: 3px;
+  }
+  .contact__related-pages i {
+    font-size: 50px;
+  }
+  .contact__related-pages p {
+    font-size: 25px;
   }
 }

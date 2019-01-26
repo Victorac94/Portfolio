@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   contact = document.querySelector(".contact"),
   projectMore = document.querySelectorAll(".project__more"),
   projectLess = document.querySelectorAll(".project__less"),
-  yelpcampImg = document.getElementById("yelpcampImg");
+  theMoviesImg = document.getElementById("theMoviesImg");
 
   //Set the height of the 'projects' section to auto
   setHeightToAuto = () => {
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   projectLess[0].addEventListener("click", (e) => hideProjectInfo(e));
   projectLess[1].addEventListener("click", (e) => hideProjectInfo(e));
   projectLess[2].addEventListener("click", (e) => hideProjectInfo(e));
-  yelpcampImg.addEventListener("load", () => {
+  theMoviesImg.addEventListener("load", () => {
     window.setTimeout(() => {
       calculateHeight();
     }, 300); //We have to wait a little bit until all the images of the projects load so that we
