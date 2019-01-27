@@ -116,9 +116,11 @@ document.addEventListener("DOMContentLoaded", (e) => {
   projectMore[0].addEventListener("click", (e) => showProjectInfo(e));
   projectMore[1].addEventListener("click", (e) => showProjectInfo(e));
   projectMore[2].addEventListener("click", (e) => showProjectInfo(e));
+  projectMore[3].addEventListener("click", (e) => showProjectInfo(e));
   projectLess[0].addEventListener("click", (e) => hideProjectInfo(e));
   projectLess[1].addEventListener("click", (e) => hideProjectInfo(e));
   projectLess[2].addEventListener("click", (e) => hideProjectInfo(e));
+  projectLess[3].addEventListener("click", (e) => hideProjectInfo(e));
   theMoviesImg.addEventListener("load", () => {
     window.setTimeout(() => {
       calculateHeight();
