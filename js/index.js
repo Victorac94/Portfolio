@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
     positionEachProject(bigScreen);
   }
 
-  //Put each 'project' element on an absolute position so that the don't move
+  //Put each 'project' element on an absolute position so that they don't move
   //when clicking on a project description
   positionEachProject = (bigScreen) => {
     const left = [];
@@ -116,11 +116,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
   projectMore[0].addEventListener("click", (e) => showProjectInfo(e));
   projectMore[1].addEventListener("click", (e) => showProjectInfo(e));
   projectMore[2].addEventListener("click", (e) => showProjectInfo(e));
-  projectMore[3].addEventListener("click", (e) => showProjectInfo(e));
   projectLess[0].addEventListener("click", (e) => hideProjectInfo(e));
   projectLess[1].addEventListener("click", (e) => hideProjectInfo(e));
   projectLess[2].addEventListener("click", (e) => hideProjectInfo(e));
-  projectLess[3].addEventListener("click", (e) => hideProjectInfo(e));
   theMoviesImg.addEventListener("load", () => {
     window.setTimeout(() => {
       calculateHeight();
