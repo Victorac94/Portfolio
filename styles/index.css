@@ -229,6 +229,14 @@ a {
   max-height: 250px;
 }
 
+.project-github {
+  position: absolute;
+  bottom: 19px;
+  left: 10px;
+  font-size: 26px !important;
+  color: #54616a !important;
+}
+
 .project__more,
 .project__less {
   position: absolute;
@@ -293,6 +301,9 @@ a {
   .contact {
     background: #fff url("images/Contact_BG_Mobile_Landscape.svg") bottom/100% no-repeat;
   }
+  .project-github {
+    bottom: 15px;
+  }
 }
 
 @media only screen and (min-width: 450px) and (max-width: 599px) {
@@ -351,6 +362,9 @@ a {
   .project h2 {
     font-size: 19px;
   }
+  .project-github {
+    bottom: 15px;
+  }
   .project__more,
   .project__less {
     bottom: 5px;
@@ -394,6 +408,9 @@ a {
     /* This max-height must be greater than the 'project__description' will ever be */
     max-height: 250px;
     transition: max-height 0.5s ease-out;
+  }
+  .project-github {
+    bottom: 14px;
   }
   .project__more,
   .project__less {

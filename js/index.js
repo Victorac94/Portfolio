@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", (e) => {
-  let windowInnerWidth;
   const menuIcon = document.querySelector(".menu-icon"),
   menu = document.querySelector(".menu"),
   menuBackground = document.querySelector(".menu-show-background"),
@@ -15,7 +14,10 @@ document.addEventListener("DOMContentLoaded", (e) => {
   contact = document.querySelector(".contact"),
   projectMore = document.querySelectorAll(".project__more"),
   projectLess = document.querySelectorAll(".project__less"),
-  theMoviesImg = document.getElementById("theMoviesImg");
+  projectsImg = document.querySelectorAll(".project__img");
+  let windowInnerWidth;
+  let counter = 0;
+  let totalImg = projectsImg.length;
 
   //Set the height of the 'projects' section to auto
   setHeightToAuto = () => {
@@ -28,8 +30,23 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
   //Get the height of the 'projects' section and set it to be fixed
   calculateHeight = () => {
-    let projectsHeight = projects.clientHeight;
+    let isInfoShowing = document.querySelector(".project__description__show");
     let bigScreen = false;
+    let projectsHeight;
+
+    if (isInfoShowing) {
+      let transDuration = isInfoShowing.style.transitionDuration;
+      isInfoShowing.style.transitionDuration = 0;
+
+      isInfoShowing.classList.remove("project__description__show");
+      projectsHeight = projects.clientHeight;
+      isInfoShowing.classList.add("project__description__show");
+
+      isInfoShowing.style.transitionDuration = transDuration;
+    } else {
+      projectsHeight = projects.clientHeight;
+    }
+
     if (window.innerWidth >= 600) {
       bigScreen = true;
     }
@@ -119,12 +136,14 @@ document.addEventListener("DOMContentLoaded", (e) => {
   projectLess[0].addEventListener("click", (e) => hideProjectInfo(e));
   projectLess[1].addEventListener("click", (e) => hideProjectInfo(e));
   projectLess[2].addEventListener("click", (e) => hideProjectInfo(e));
-  theMoviesImg.addEventListener("load", () => {
-    window.setTimeout(() => {
-      calculateHeight();
-    }, 300); //We have to wait a little bit until all the images of the projects load so that we
-             //can measure the correct height of the 'projects' and 'projects-collection' elements
-  });
+  projectsImg.forEach(img => {
+    img.addEventListener("load", () => {
+      counter++;
+      if (counter === totalImg) {
+        calculateHeight();
+      }
+    })
+  })
   window.addEventListener("resize", () => {
     if (window.innerWidth !== windowInnerWidth) {
       setHeightToAuto();
