@@ -10,8 +10,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   contactLinkDesktop = document.querySelector(".contact-link-desktop"),
   about = document.querySelector(".about"),
   projects = document.querySelector(".projects"),
-  contact = document.querySelector(".contact"),
-  projectsImg = document.querySelectorAll(".project__img");
+  contact = document.querySelector(".contact");
 
   // Show / hide mobile menu
   toggleMenu = () => {
