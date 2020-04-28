@@ -2,179 +2,190 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Víctor Antúnez's Portfolio</title>
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="favicon.ico">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-config" content="browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="styles/index.css" />
-  <script src="js/index.js"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans:400,700|Roboto" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <base target="_blank">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Antunez's Portfolio</title>
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 
 <body>
-  <div class="container">
-    <div class="menu">
-      <p class="about-link">
-        ABOUT ME
-      </p>
-      <p class="projects-link">
-        PROJECTS
-      </p>
-      <p class="contact-link">
-        CONTACT
-      </p>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Víctor Antúnez</h1>
+            <div class="menu-btn">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <!-- Theese links are for mobile -->
+            <ul class="page-links">
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects">
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <!-- Theese links are for desktop -->
+            <ul class="page-links-desktop">
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects">
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <!-- About me -->
+        <section id="about">
+            <h2>About me</h2>
+            <div class="section-wrapper">
+                <div class="about-img-wrapper">
+                    <img src="styles\images\PicsArt_02-20-10.39.17.jpg" alt="victor antunez picture">
+                </div>
+                <p>
+                    I am a Full Stack - Web Developer with knowledge in the latest web technologies like <b>Angular</b>,
+                    <b>React</b>, <b>NodeJS</b>, <b>Express</b> and <b>Redux</b> as well as <b>SQL</b>, <b>Git</b>, and
+                    <b>SASS</b>. Here a some of my most important projects.
+                </p>
+            </div>
+        </section>
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <section class="section-wrapper">
+                <article>
+                    <div class="img-wrapper">
+                        <a href="https://connectall-6568a.web.app/register" target="blank" rel="noreferrer noopener">
+                            <img src="styles\images\ConnectAll thumbnail.jpg" alt="ConnectAll thumbnail">
+                        </a>
+                    </div>
+                    <div class="project-info">
+                        <h3>ConnectAll</h3>
+                        <p>
+                            This is a Full Stack project made to connect people of similar hobbies, wether that is
+                            athletics, hiking, basketball, cycling... It has been made with <b>Angular</b>,
+                            <b>NodeJS</b>, <b>ExpressJS</b>, <b>SQL</b> using <b>MariaDB</b>, <b>Redux</b> and
+                            <b>SASS</b>. The front is hosted at <i>Firebase</i> and the back at <i>Heroku</i>.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/Victorac94/connectAll_Angular" target="blank"
+                                rel="noreferrer noopener">Frontend code</a>
+                            <a href="https://github.com/Victorac94/connectAll_Node" target="blank"
+                                rel="noreferrer noopener">Backend code</a>
+                            <a href="https://connectall-6568a.web.app/register" target="blank"
+                                rel="noreferrer noopener">View page</a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="img-wrapper">
+                        <a href="https://victorac94.github.io/The-Movies/" target="blank" rel="noreferrer noopener">
+                            <img src="styles/images/The Movies thumbnail.jpg" alt="the movies thumbnail">
+                        </a>
+                    </div>
+                    <div class="project-info">
+                        <h3>The Movies</h3>
+                        <p>
+                            This is a Frontend project that allows the user to see information about movies, series, and
+                            actors/actresses. It has been made with <b>React</b> and <b>Redux</b> and uses the <b>TMDB
+                                API</b>.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/Victorac94/The-Movies" target="blank"
+                                rel="noreferrer noopener">Frontend code</a>
+                            <a href="https://victorac94.github.io/The-Movies/" target="blank"
+                                rel="noreferrer noopener">View page</a>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <div class="img-wrapper">
+                        <a href="https://victorac94.github.io/todo-neoland/" target="blank" rel="noreferrer noopener">
+                            <img src="styles\images\TODO thumbnail.jpg" alt="TODO list thumbnail">
+                        </a>
+                    </div>
+                    <div class="project-info">
+                        <h3>TODO list</h3>
+                        <p>
+                            This is a Frontend project developed as a way to keep track of the tasks one has to do. It
+                            has been developed with <b>Vanilla ES6 Javascript</b>, <b>HTML5</b> and <b>CSS3</b>.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/Victorac94/todo-neoland" target="blank"
+                                rel="noreferrer noopener">Frontend code</a>
+                            <a href="https://victorac94.github.io/todo-neoland/" target="blank"
+                                rel="noreferrer noopener">View page</a>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <section class="section-wrapper">
+                <article class="email">
+                    <i class="far fa-envelope"></i>
+                    <p>victorac94@hotmail.com</p>
+                </article>
+                <article>
+                    <a href="https://github.com/Victorac94" target="blank" rel="noreferrer noopener">
+                        <i class="fab fa-github"></i>
+                        <p>
+                            Github
+                        </p>
+                    </a>
+                </article>
+                <article>
+                    <a href="https://www.linkedin.com/in/victor-antunez/" target="blank" rel="noreferrer noopener">
+                        <i class="fab fa-linkedin"></i>
+                        <p>
+                            Linkedin
+                        </p>
+                    </a>
+                </article>
+            </section>
+        </section>
     </div>
-    <div class="menu-show-background"></div>
-    <header class="header">
-      <h1>Víctor Antúnez</h1>
-      <i class="fas fa-bars menu-icon"></i>
-      <div class="menu-desktop">
-        <p class="about-link-desktop">
-          ABOUT ME
-        </p>
-        <p class="projects-link-desktop">
-          PROJECTS
-        </p>
-        <p class="contact-link-desktop">
-          CONTACT
-        </p>
-      </div>
-    </header>
-    <section class="about">
-      <h1>ABOUT ME</h1>
-      <div class="about-info">
-        <img src="styles\images\PicsArt_02-20-10.39.17.jpg" alt="Selfie Picture" />
-        <p>
-          I am a Full Stack - Web Developer with knowledge in the latest web technologies like <b>Angular</b>,
-          <b>React</b>, <b>NodeJS</b>, <b>Express</b> and <b>Redux</b> as well as <b>SQL</b>, <b>Git</b>, and
-          <b>SASS</b>. Here a some of my most important projects.
-        </p>
-      </div>
-    </section>
-    <section class="projects projects__fixed__height">
-      <h1>PROJECTS</h1>
-      <div class="projects-group">
-        <div class="project">
-          <div class="project__container">
-            <a href="https://victorac94.github.io/The-Movies/">
-              <img src="styles/images/The Movies thumbnail.jpg" alt="The Movies thumbnail" />
-              <div class="project__container_details">
-                <p>
-                  -React
-                </p>
-                <p>
-                  -Redux
-                </p>
-                <p>
-                  -Axios
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="project__footer">
-            <a href="https://github.com/Victorac94/The-Movies">
-              <i class="fab fa-github project-github"></i>
-            </a>
-            <a href="https://victorac94.github.io/The-Movies/">
-              <h2>The Movies</h2>
-            </a>
-            <a href="https://victorac94.github.io/The-Movies/">
-              <i class="fas fa-external-link-alt project__link__icon"></i>
-            </a>
-          </div>
-        </div>
-        <div class="project">
-          <div class="project__container">
-            <a href="https://victorac94.github.io/todo-neoland/">
-              <img src="styles/images/TODO thumbnail.png" alt="TODO list thumbnail" />
-              <div class="project__container_details">
-                <p>
-                  -HTML
-                </p>
-                <p>
-                  -JS
-                </p>
-                <p>
-                  -CSS
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="project__footer">
-            <a href="https://github.com/Victorac94/todo-neoland">
-              <i class=" fab fa-github project-github"></i>
-            </a>
-            <a href="https://victorac94.github.io/todo-neoland/">
-              <h2>TODO list</h2>
-            </a>
-            <a href="https://victorac94.github.io/todo-neoland/">
-              <i class="fas fa-external-link-alt project__link__icon"></i>
-            </a>
-          </div>
-        </div>
-        <div class="project">
-          <div class="project__container">
-            <a href="https://victorac94.github.io/crypto-tracker/">
-              <img src="styles/images/Crypto Tracker thumbnail.png" alt="Crypto Tracker thumbnail" />
-              <div class="project__container_details">
-                <p>
-                  -React
-                </p>
-                <p>
-                  -Redux
-                </p>
-                <p>
-                  -Chart.js
-                </p>
-              </div>
-            </a>
-          </div>
-          <div class="project__footer">
-            <a href="https://github.com/Victorac94/crypto-tracker">
-              <i class="fab fa-github project-github"></i>
-            </a>
-            <a href="https://victorac94.github.io/crypto-tracker/">
-              <h2>Crypto Tracker</h2>
-            </a>
-            <a href="https://github.com/Victorac94/crypto-tracker">
-              <i class="fas fa-external-link-alt project__link__icon"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="contact">
-      <h1>CONTACT</h1>
-      <div class="contact-info">
-        <div class="contact__email">
-          <i class="far fa-envelope"></i>
-          <p>
-            victorac94@hotmail.com
-          </p>
-        </div>
-        <div class="contact__related-pages">
-          <a href="https://github.com/Victorac94">
-            <i class="fab fa-github"></i>
-            <p>
-              Github
-            </p>
-          </a>
-        </div>
-      </div>
-    </section>
-  </div>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const about = document.querySelector('a[href="#about"]');
+        const projects = document.querySelector('a[href="#projects"]');
+        const contact = document.querySelector('a[href="#contact"]');
+
+        toggleMobileMenu = () => {
+            menuBtn.classList.toggle('show-menu');
+        }
+
+        menuBtn.addEventListener('click', toggleMobileMenu);
+        about.addEventListener('click', toggleMobileMenu);
+        projects.addEventListener('click', toggleMobileMenu);
+        contact.addEventListener('click', toggleMobileMenu);
+    </script>
 </body>
 
 </html>
