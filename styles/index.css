@@ -198,6 +198,15 @@ img {
     margin-bottom: 1em;
 }
 
+#projects article h3 a {
+    text-decoration: none;
+}
+
+#projects article h3 a:visited {
+    text-decoration: none;
+    color: var(--secondary-font-color);
+}
+
 .project-links {
     margin-top: 0.7em;
 }
