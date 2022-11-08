@@ -2,7 +2,8 @@
 @import 'reset.css';
 
 :root {
-    --main-color: #0f56da;
+    /* --main-color: #0f56da; */
+    --main-color: #1353c8;
     --main-font-color: #3d4753;
     --secondary-font-color: #525c69;
 }
