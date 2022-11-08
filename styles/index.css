@@ -2,7 +2,6 @@
 @import 'reset.css';
 
 :root {
-    /* --main-color: #0f56da; */
     --main-color: #1353c8;
     --main-font-color: #3d4753;
     --secondary-font-color: #525c69;
@@ -198,10 +197,7 @@ img {
     margin-bottom: 1em;
 }
 
-#projects article h3 a {
-    text-decoration: none;
-}
-
+#projects article h3 a,
 #projects article h3 a:visited {
     text-decoration: none;
     color: var(--secondary-font-color);
