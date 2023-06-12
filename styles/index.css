@@ -23,7 +23,7 @@ body {
 
 body > .container {
     width: 100%;
-    max-width: 1024px;
+    max-width: 1025px;
     padding-bottom: 2.5em;
     position: relative;
     font-family: sans-serif;
@@ -182,7 +182,8 @@ section h2 {
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 1.5em;
-    box-shadow: 1px 1px 2px #e2ecf3;
+    /* box-shadow: 1px 1px 2px #e2ecf3; */
+    box-shadow: 1px 1px 2px #d0e5f2, -1px -1px 2px #d0e5f2;
 }
 
 img {
@@ -272,7 +273,7 @@ img {
         margin: 0 auto;
         padding-bottom: 0;
         padding-top: 2.5em;
-        box-shadow: 1px 1px 2px #e7f6ff, -1px -1px 2px #e7f6ff;
+        box-shadow: 1px 1px 2px #c6dbe8, -1px -1px 2px #c6dbe8;
     }
 
     body > .container > header {
